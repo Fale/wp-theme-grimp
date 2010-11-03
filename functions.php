@@ -87,6 +87,12 @@ function greenpark2() {
 		else :
 			update_option("greenpark2_feed_enable", "no");
 		endif;
+
+                if(isset($_POST['sidebar_disable']) and $_POST['sidebar_disable'] == 'yes') :
+                        update_option("greenpark2_sidebar_disable", "yes");
+                else :
+                      	update_option("greenpark2_sidebar_disable", "no");
+                endif;
 		
 		if(isset($_POST['sidebar_about_title']) and $_POST['sidebar_about_title'] == '') {
 			update_option("greenpark2_sidebar_about_title", "About");
@@ -131,6 +137,8 @@ function greenpark2() {
 
 
     <h3 id="greenpark2_sidebar">Sidebar</h3>
+	Check to disable the sidebar <input type="checkbox" name="sidebar_disable" <?php echo ($data['sidebar']['diisable'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /> 
+
 		<p>Sidebar box &nbsp; <a href="#greenpark2_sidebar_doc">( ? )</a></p>
 		<table class="form-table">
 			<tr>
