@@ -222,9 +222,16 @@ td#next { text-align: right; }
 
 #content-alone #content-with-sidebar {
   border-right: 3px solid #D5DADD;
-  margin: 0 280px 0 0;
   overflow: hidden;
   padding: 19px 0 0;
+}
+
+#content-alone {
+  margin: 0 0 0 0;
+}
+
+#content-with-sidebar {
+  margin: 0 280px 0 0;
 }
 
 #sidebar {
