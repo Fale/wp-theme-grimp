@@ -13,7 +13,7 @@
           </div>
     		</div>
     		
-    		<?php if (get_option('greenpark2_comments_disable') != 'yes') { comments_template('', true); } ?>
+    		<?php if (get_option('greenpark2_comments_page_disable') != 'yes') { comments_template('', true); } ?>
   		
   		<?php endwhile; endif; ?>
 
