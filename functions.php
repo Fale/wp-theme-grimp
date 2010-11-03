@@ -319,24 +319,10 @@ function greenpark2_options() { // Adds to menu
 function greenpark2_footer() { ?>
 
 <div id="footer" class="clearfix">
-<p class="alignright">
-  <a href="#home" class="top-link"><?php _e('Back to Top', 'default'); ?></a>
-</p>
-
-<p>
-	&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?>
-  &middot; <?php _e('Proudly powered by', 'default'); ?>
-  <a href="http://wordpress.org/" title="<?php _e('Blogsoftware by Wordpress', 'default'); ?>">WordPress</a>
-	<span class="amp">&amp;</span>
-  <a href="http://cordobo.com/green-park-2/" title="Cordobo Green Park 2 Beta 5">Green Park 2</a>
-  <?php _e('by', 'default'); ?>
-  <a href="http://cordobo.com/" title="Webdesign by Cordobo">Cordobo</a>.
-</p>
-
-<p class="signet">
+<p class="aligncenter">
+  &copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?><br />
+  Partita IVA: 07185690968<br />
   <?php _e('Valid XHTML 1.0 Transitional | Valid CSS 3', 'default'); ?>
-  <br /><br />
-	<img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo-cgp2.png" alt="Cordobo Green Park 2 logo" title="Cordobo Green Park 2" width="75" height="12" />
 </p>
 
 </div>
