@@ -220,7 +220,7 @@ td#next { text-align: right; }
 
 #container { float: left; margin: 0 -350px 0 0; width: 100%; }
 
-#content {
+#content-alone #content-with-sidebar {
   border-right: 3px solid #D5DADD;
   margin: 0 280px 0 0;
   overflow: hidden;
@@ -794,8 +794,8 @@ html .clearfix { display: block; }
   h1#logo a span { color: #000; height: auto; margin: 0; padding: 0; position: static; width: auto; }
   
   #container { float: none; margin: 0; }
-  #content { border: 0 none; margin: 0; overflow: visible; position: static; }
+  #content-alone #content-with-sidebar { border: 0 none; margin: 0; overflow: visible; position: static; }
   /* Attaches the URI to each link so they are visible in the print version */
-  #content .entry p a:after { content: "  [" attr(href) "] "; }
+  #content-alone #content-with-sidebar .entry p a:after { content: "  [" attr(href) "] "; }
   #accessibility, hr, #nav, #sidebar, .something { display: none; }
 }
