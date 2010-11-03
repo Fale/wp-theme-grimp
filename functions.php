@@ -15,28 +15,7 @@ if ( function_exists('register_sidebar') ) {
     'after_widget' => '</li>',
     'before_title' => '<div class="sb-title widgettitle">',
     'after_title' => '</div>',
-    'name' => '1'
-  ));
-    register_sidebar(array(
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget' => '</li>',
-    'before_title' => '<div class="sb-title widgettitle">',
-    'after_title' => '</div>',
-    'name' => '2'
-  ));
-    register_sidebar(array(
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget' => '</li>',
-    'before_title' => '<div class="sb-title widgettitle">',
-    'after_title' => '</div>',
-    'name' => '3'
-  ));
-    register_sidebar(array(
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget' => '</li>',
-    'before_title' => '<div class="sb-title widgettitle">',
-    'after_title' => '</div>',
-    'name' => '4'
+    'name' => 'Sidebar'
   ));
 }
 
