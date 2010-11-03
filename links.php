@@ -7,7 +7,7 @@ Template Name: Links
 <?php get_header(); ?>
 
 <div id="container">
-	<div id="content-<?php if (get_option('greenpark2_sidebar_disable') == 'no') { echo 'with-sidebar';} else { echo 'alone'; }?>">
+	<div id="content-<?php if (get_option('greenpark2_sidebar_disable') == 'yes') { echo 'alone'; } else { echo 'with-sidebar'; }?>">
     
     <div class="hentry post">
       <h2><?php _e('Links', 'default'); ?></h2>
