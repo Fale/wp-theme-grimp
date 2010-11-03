@@ -143,6 +143,7 @@ sub, sup { font-size: 0.7em; }
 ------------------------------------------------------------------- */
 
 .aligncenter, div.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.aligncenter { text-align: center; }
 .aligncenter img, .aligncenter p.wp-caption-text {
   display: block;
   margin-left: auto;
