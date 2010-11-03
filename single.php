@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
-	<div id="content-<?php if (get_option('greenpark2_sidebar_disable') == 'no') { echo 'with-sidebar';} else { echo 'alone'; }?>">
-		<div id="content">
+	<div id="container">
+		<div id="content-<?php if (get_option('greenpark2_sidebar_disable') == 'no') { echo 'with-sidebar';} else { echo 'alone'; }?>">
+
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
