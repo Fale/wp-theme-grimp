@@ -7,7 +7,7 @@ Template Name: Archives
 <?php get_header(); ?>
 
 <div id="container">
-	<div id="content">
+	<div id="content-<?php if (get_option('greenpark2_sidebar_disable') == 'no') { echo 'with-sidebar';} else { echo 'alone'; }?>">
 
     <div class="hentry post">
       <h1><?php _e('Archives by Month', 'default'); ?></h1>
@@ -28,5 +28,5 @@ Template Name: Archives
 	</div>
 </div>
 
-<?php get_sidebar(); ?>
+<?php if(get_option('greenpark2_sidebar_disable') == 'no') get_sidebar(); ?>
 <?php get_footer(); ?>

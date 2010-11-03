@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<div id="container">
-		<div id="content">
+		<div id="content-<?php if (get_option('greenpark2_sidebar_disable') == 'no') { echo 'with-sidebar';} else { echo 'alone'; }?>">
       
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -56,5 +56,5 @@
 		</div><!-- #content -->
 	</div><!-- #container -->
 
-<?php get_sidebar(); ?>
+<?php if(get_option('greenpark2_sidebar_disable') == 'no') get_sidebar(); ?>
 <?php get_footer(); ?>
