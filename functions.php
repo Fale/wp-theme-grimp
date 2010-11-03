@@ -72,6 +72,12 @@ function greenpark2() {
                 else :
                       	update_option("greenpark2_sidebar_disable", "no");
                 endif;
+
+                if(isset($_POST['comments_disable']) and $_POST['comments_disable'] == 'yes') :
+                        update_option("greenpark2_comments_disable", "yes");
+                else :
+                        update_option("greenpark2_comments_disable", "no");
+                endif;
 		
 		if(isset($_POST['sidebar_about_title']) and $_POST['sidebar_about_title'] == '') {
 			update_option("greenpark2_sidebar_about_title", "About");
@@ -103,6 +109,9 @@ function greenpark2() {
 			'about_content' => get_option('greenpark2_sidebar_about_content')
 		),
 		'aside' => get_option('greenpark2_aside_cat'),
+		'comments' => array(
+			'disable' => get_option('greenpark2_comments_disable')
+		),
 		'about' => get_option('greenpark2_about_site')
 	);
 ?>
@@ -139,6 +148,10 @@ function greenpark2() {
 			</tr>
 		</table>
 		<br />
+
+
+    <h3 id="greenpark2_comments">Comments</h3>
+		 Check to hide the comments <input type="checkbox" name="comments_disable" <?php echo ($data['comments']['disable'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /> 
 
 
     <h3 id="greenpark2_feedburner">Feedburner</h3>
