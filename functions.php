@@ -310,7 +310,7 @@ function greenpark2() {
 }
 
 function greenpark2_options() { // Adds to menu
-	add_menu_page('greenpark2 Settings', __('Green Park 2 Settings', 'default'), 'edit_themes', __FILE__, 'greenpark2');
+	add_theme_page('greenpark2 Settings', __('Green Park 2 Settings', 'default'), 'edit_themes', __FILE__, 'greenpark2');
 }
 
 
