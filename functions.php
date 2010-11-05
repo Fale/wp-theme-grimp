@@ -67,6 +67,48 @@ function greenpark2() {
 			update_option("greenpark2_feed_enable", "no");
 		endif;
 
+                if(isset($_POST['accessibility_disable']) and $_POST['accessibility_disable'] == 'yes') :
+                        update_option("greenpark2_accessibility_disable", "yes");
+                else :
+                      	update_option("greenpark2_accessibility_disable", "no");
+                endif;
+
+                if(isset($_POST['accessibility_home']) and $_POST['accessibility_home'] == 'yes') :
+                        update_option("greenpark2_accessibility_home", "yes");
+                else :
+                      	update_option("greenpark2_accessibility_home", "no");
+                endif;
+
+                if(isset($_POST['accessibility_content']) and $_POST['accessibility_content'] == 'yes') :
+                        update_option("greenpark2_accessibility_content", "yes");
+                else :
+                      	update_option("greenpark2_accessibility_content", "no");
+                endif;
+
+                if(isset($_POST['accessibility_feed']) and $_POST['accessibility_feed'] == 'yes') :
+                        update_option("greenpark2_accessibility_feed", "yes");
+                else :
+                      	update_option("greenpark2_accessibility_feed", "no");
+                endif;
+
+                if(isset($_POST['accessibility_meta']) and $_POST['accessibility_meta'] == 'yes') :
+                        update_option("greenpark2_accessibility_meta", "yes");
+                else :
+                      	update_option("greenpark2_accessibility_meta", "no");
+                endif;
+
+                if(isset($_POST['accessibility_register']) and $_POST['accessibility_register'] == 'yes') :
+                        update_option("greenpark2_accessibility_register", "yes");
+                else :
+                      	update_option("greenpark2_accessibility_register", "no");
+                endif;
+
+                if(isset($_POST['accessibility_loginout']) and $_POST['accessibility_loginout'] == 'yes') :
+                        update_option("greenpark2_accessibility_loginout", "yes");
+                else :
+                      	update_option("greenpark2_accessibility_loginout", "no");
+                endif;
+
                 if(isset($_POST['sidebar_disable']) and $_POST['sidebar_disable'] == 'yes') :
                         update_option("greenpark2_sidebar_disable", "yes");
                 else :
@@ -108,6 +150,15 @@ function greenpark2() {
 			'about_title' => get_option('greenpark2_sidebar_about_title'),
 			'about_content' => get_option('greenpark2_sidebar_about_content')
 		),
+                'accessibility' => array(
+                        'disable' => get_option('greenpark2_accessibility_disable'),
+                        'home' => get_option('greenpark2_accessibility_home'),
+                        'content' => get_option('greenpark2_accessibility_content'),
+                        'feed' => get_option('greenpark2_accessibility_feed'),
+                        'meta' => get_option('greenpark2_accessibility_meta'),
+                        'register' => get_option('greenpark2_accessibility_register'),
+                        'loginout' => get_option('greenpark2_accessibility_loginout')
+                ),
 		'aside' => get_option('greenpark2_aside_cat'),
 		'comments' => array(
 			'page_disable' => get_option('greenpark2_comments_page_disable')
@@ -153,6 +204,14 @@ function greenpark2() {
     <h3 id="greenpark2_comments">Comments</h3>
 		 Check to hide the comments from pages<input type="checkbox" name="comments_page_disable" <?php echo ($data['comments']['page_disable'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /> 
 
+    <h3 id="greenpark2_accessibility">Accessibility</h3>
+		Check to hide all accessibility links in the top right corner (this will override all the following function of this section) <input type="checkbox" name="accessibility_disable" <?php echo ($data['accessibility']['disable'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /><br />
+		Check to hide the Home link <input type="checkbox" name="accessibility_home" <?php echo ($data['accessibility']['home'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /><br />
+		Check to hide the Content link <input type="checkbox" name="accessibility_content" <?php echo ($data['accessibility']['content'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /><br />
+		Check to hide the Feed link <input type="checkbox" name="accessibility_feed" <?php echo ($data['accessibility']['feed'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /><br />
+		Check to hide the Meta link <input type="checkbox" name="accessibility_meta" <?php echo ($data['accessibility']['meta'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /><br />
+		Check to hide the Register link <input type="checkbox" name="accessibility_register" <?php echo ($data['accessibility']['register'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /><br />
+		Check to hide the Login/Logout link <input type="checkbox" name="accessibility_loginout" <?php echo ($data['accessibility']['loginout'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" />		
 
     <h3 id="greenpark2_feedburner">Feedburner</h3>
 		<p>Feedburner information</p>
