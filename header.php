@@ -32,15 +32,46 @@ if (top.location != self.location) top.location = self.location;
 
 <div id="header" class="clearfix">
 
-	<ul id="accessibility">
-		<li><a href="<?php echo get_option('home'); ?>/" title="<?php _e('Go to homepage', 'default'); ?>"><?php _e('Home', 'default'); ?></a></li>
-		<li><a href="#content" title="Skip to content"><?php _e('Content', 'default'); ?></a></li>
-		<li><a href="<?php if (get_option('greenpark2_feed_enable') == 'yes') { echo 'http://feeds.feedburner.com/' . get_option('greenpark2_feed_uri'); } else { echo get_bloginfo('rss2_url'); }?>">RSS</a></li>
-		<?php wp_meta(); ?>
-		<?php wp_register(); ?>
-		<li class="last-item"><?php wp_loginout(); ?></li>
-	</ul>
-
+	<?php if (get_option('greenpark2_accessibility_disable') != 'yes')
+	{
+		echo('<ul id="accessibility">');
+			if (get_option('greenpark2_accessibility_home') != 'yes')
+			{
+				echo '<li><a href="';
+				echo get_option('home');
+				echo '" title="';
+				echo _e('Go to homepage', 'default');
+				echo '">';
+				echo _e('Home', 'default');
+				echo '</a></li>';
+			}
+			if (get_option('greenpark2_accessibility_content') != 'yes')
+			{
+				echo '<li><a href="#content" title="Skip to content">';
+				echo _e('Content', 'default');
+				echo '</a></li>';
+			}
+			if (get_option('greenpark2_accessibility_feed') != 'yes')
+			{
+				echo '<li><a href="';
+				if (get_option('greenpark2_feed_enable') == 'yes')
+					echo 'http://feeds.feedburner.com/' . get_option('greenpark2_feed_uri');
+				else
+					echo get_bloginfo('rss2_url');
+				echo '">RSS</a></li>';
+			}
+			if (get_option('greenpark2_accessibility_meta') != 'yes')
+				wp_meta();
+			if (get_option('greenpark2_accessibility_register') != 'yes')
+				wp_register();
+			if (get_option('greenpark2_accessibility_loginout') != 'yes')
+			{
+				echo '<li class="last-item">';
+				echo wp_loginout();
+				echo '</li>';
+			}
+		echo '</ul>';
+	}?>
 	<div id="branding">
 		<h1 id="logo"><a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
 		<div class="description">
