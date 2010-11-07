@@ -1,4 +1,4 @@
-/*
+l/*
 Theme Name: Cordobo Green Park 2
 Theme URI: http://cordobo.com/green-park-2/
 Description: Lightweight fast-rendering theme with 2-3 column layout and right sidebar, Widget-ready (4 slots), built-in support for plugins (e.g. twitter), support for threaded/nested comments, fully localized, easy to customize via settings-page. By <a href="http://cordobo.com">Andreas Jacob</a>.
@@ -255,12 +255,12 @@ td#next { text-align: right; }
 #logo, #logo a { display: block; height: 50px; width: 127px; }
 #logo { position: absolute; top: -25px; left: 27px; }
 #logo a { background: transparent url(img/logo.png) top left no-repeat; text-indent: -9999em; }
-.description { color: #868F98; display: block; left: 124px; position: absolute; top: 44px; }
+.description-logo { color: #868F98; display: block; left: 140px; position: absolute; top: 44px; }
 
 /* Text logo */
 #branding { display: block; position: absolute; top: 30px; left: 28px; }
 h1#brand { font-size: 30px; line-height: 1.2; margin: 0; }
-#brand, .description { color: #868F98; float: left; margin: 17px 0 0 10px; }
+#brand, .description-brand { color: #868F98; float: left; margin: 17px 0 0 10px; }
 
 
 /* MENUES */
