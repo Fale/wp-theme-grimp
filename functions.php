@@ -290,34 +290,10 @@ function greenpark2() {
 
 	<h3 id="greenpark2_logo_doc">Logo Setup</h3>
 	<p>
-  You can easily replace the "text logo" with your image.
-  Open the file "styles.css" in the themes folder
-  <ul>
-  <li>Find the text<br />
-    <code>Start EXAMPLE CODE for an image logo</code> (line 224)</li>
-  
-  <li>Delete <code>/*</code> before<br />
-    <code>#logo,</code> (line 225)</li>
-  
-  <li>Delete <code>*/</code> (line 230) after<br />
-    <code>.description</code> (line 229)</li>
-  
-  <li>Find <code>logo.png</code> (line 228) and replace it with the name of your logo.</li>
-  
-  <li>Change the height and width to fit your logo (line 226)<br />
-    <code>#logo, #logo a { display: block; height: 19px; width: 87px; }</code></li>
-  
-  <li>Find the text<br />
-    <code>Start EXAMPLE CODE for a text logo</code> (line 234)</li>
-  
-  <li>Add <code>/*</code> before<br />
-    <code>#branding</code> (line 235)</li>
-  
-  <li>Add <code>*/</code> (line 239) after<br />
-    <code>#logo, .description { color: #868F98; float: left; margin: 17px 0 0 10px; }</code> (line 238)</li>
-  
-  <li>Save your changes and upload the file style.css to your themes folder.</li>
-  </ul>
+  	  <ul>
+ 	    <li>Check the checkbox on this page (Logo section)</li>
+ 	    <li>Replace img/logo.ppng with theimage you want</li>
+          </ul>
 	</p>
 	
 
