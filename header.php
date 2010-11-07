@@ -73,7 +73,7 @@ if (top.location != self.location) top.location = self.location;
 		echo '</ul>';
 	}?>
 	<div id="branding">
-		<h1 id="logo"><a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+		<h1 id="<?php if(get_option('greenpark2_logo_show')!= 'yes'){echo 'brand';}else{echo 'logo';}?>"><a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
 		<div class="description">
 		  <?php bloginfo('description'); ?>
     </div>

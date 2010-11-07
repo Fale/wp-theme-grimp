@@ -60,6 +60,12 @@ function greenpark2() {
 		update_option("google_analytics", stripslashes($_POST['google_analytics']));
 		update_option("google_adsense_bottom", stripslashes($_POST['google_adsense_bottom']));
 		update_option("google_adsense_sidebar", stripslashes($_POST['google_adsense_sidebar']));
+
+                if(isset($_POST['logo_show']) and $_POST['logo_show'] == 'yes') :
+                        update_option("greenpark2_logo_show", "yes");
+                else :
+                      	update_option("greenpark2_logo_show", "no");
+                endif;
 		
 		if(isset($_POST['feed_enable']) and $_POST['feed_enable'] == 'yes') :
 			update_option("greenpark2_feed_enable", "yes");
@@ -150,6 +156,9 @@ function greenpark2() {
 			'about_title' => get_option('greenpark2_sidebar_about_title'),
 			'about_content' => get_option('greenpark2_sidebar_about_content')
 		),
+		'logo' => array(
+			'show' => get_option('greenpark2_logo_show')
+		),
                 'accessibility' => array(
                         'disable' => get_option('greenpark2_accessibility_disable'),
                         'home' => get_option('greenpark2_accessibility_home'),
@@ -202,7 +211,10 @@ function greenpark2() {
 
 
     <h3 id="greenpark2_comments">Comments</h3>
-		 Check to hide the comments from pages<input type="checkbox" name="comments_page_disable" <?php echo ($data['comments']['page_disable'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /> 
+		Check to hide the comments from pages<input type="checkbox" name="comments_page_disable" <?php echo ($data['comments']['page_disable'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /> 
+
+    <h3 id="greenpark2_logo">Logo</h3>
+		Check to show the logo situated into img/logo.png instead of the brand <input type="checkbox" name="logo_show" <?php echo ($data['logo']['show'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" />
 
     <h3 id="greenpark2_accessibility">Accessibility</h3>
 		Check to hide all accessibility links in the top right corner (this will override all the following function of this section) <input type="checkbox" name="accessibility_disable" <?php echo ($data['accessibility']['disable'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /><br />

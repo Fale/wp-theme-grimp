@@ -251,25 +251,16 @@ td#next { text-align: right; }
 ------------------------------------------------------------------- */
 
 
-/* Start EXAMPLE CODE image logo */
-/*
-#logo, #logo a { display: block; height: 19px; width: 87px; }
-#logo { position: absolute; top: 28px; left: 27px; }
+/* Image logo */
+#logo, #logo a { display: block; height: 30px; width: 100px; }
+#logo { position: absolute; top: -15px; left: 27px; }
 #logo a { background: transparent url(img/logo.png) top left no-repeat; text-indent: -9999em; }
 .description { color: #868F98; display: block; left: 124px; position: absolute; top: 44px; }
-*/
-/* End EXAMPLE CODE image logo */
 
-
-
-/* Start EXAMPLE CODE text logo */
-
+/* Text logo */
 #branding { display: block; position: absolute; top: 30px; left: 28px; }
-h1#logo { font-size: 30px; line-height: 1.2; margin: 0; }
-#logo, .description { color: #868F98; float: left; margin: 17px 0 0 10px; }
-
-/* End EXAMPLE CODE text logo */
-
+h1#brand { font-size: 30px; line-height: 1.2; margin: 0; }
+#brand, .description { color: #868F98; float: left; margin: 17px 0 0 10px; }
 
 
 /* MENUES */
