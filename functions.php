@@ -4,6 +4,11 @@
 // Language files loading
 function theme_init(){
 	load_theme_textdomain('default', get_template_directory() . '/languages');
+
+	register_nav_menus( array(
+		'primary' => __( 'Primary Navigation', 'default' ),
+	) );
+
 }
 add_action ('init', 'theme_init');
 
@@ -18,15 +23,6 @@ if ( function_exists('register_sidebar') ) {
     'name' => 'Sidebar'
   ));
 }
-
-
-
-// Generates the menu
-function greenpark_globalnav() {
-	if ( $menu = str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages('title_li=&echo=0&depth=1') ) )
-	echo apply_filters( 'globalnav_menu', $menu );
-}
-
 
 
 // http://sivel.net/2008/10/wp-27-comment-separation/
