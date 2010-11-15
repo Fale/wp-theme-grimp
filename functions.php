@@ -52,8 +52,6 @@ function greenpark2_feed() {
 function greenpark2() {
 	
 	if(isset($_POST['submitted']) and $_POST['submitted'] == 'yes') :
-		update_option("greenpark2_sidebar_about_title", stripslashes($_POST['sidebar_about_title']));
-		update_option("greenpark2_sidebar_about_content", stripslashes($_POST['sidebar_about_content']));
 		update_option("greenpark2_feed_uri", stripslashes($_POST['feed_uri']));
 		update_option("greenpark2_about_site", stripslashes($_POST['about_site']));
 		update_option("google_analytics", stripslashes($_POST['google_analytics']));
@@ -125,25 +123,9 @@ function greenpark2() {
                 else :
                         update_option("greenpark2_comments_page_disable", "no");
                 endif;
-		
-		if(isset($_POST['sidebar_about_title']) and $_POST['sidebar_about_title'] == '') {
-			update_option("greenpark2_sidebar_about_title", "About");
-		}
-		
-		if(isset($_POST['sidebar_about_content']) and $_POST['sidebar_about_content'] == '') {
-			update_option("greenpark2_sidebar_about_content", "Change this text in the admin section of WordPress");
-		}
-		
+				
 		echo "<div id=\"message\" class=\"updated fade\"><p><strong>Your settings have been saved.</strong></p></div>";
 	endif; 
-	
-	if(get_option('greenpark2_sidebar_about_title') == '') {
-		update_option("greenpark2_sidebar_about_title", "About");
-	}
-	
-	if(get_option('greenpark2_sidebar_about_content') == '') {
-		update_option("greenpark2_sidebar_about_content", "Change this text in the admin section of WordPress");
-	}
 	
 	$data = array(
 		'feed' => array(
@@ -151,9 +133,7 @@ function greenpark2() {
 			'enable' => get_option('greenpark2_feed_enable')
 		),
 		'sidebar' => array(
-			'disable' => get_option('greenpark2_sidebar_disable'),
-			'about_title' => get_option('greenpark2_sidebar_about_title'),
-			'about_content' => get_option('greenpark2_sidebar_about_content')
+			'disable' => get_option('greenpark2_sidebar_disable')
 		),
 		'logo' => array(
 			'show' => get_option('greenpark2_logo_show')
@@ -186,28 +166,6 @@ function greenpark2() {
 
     <h3 id="greenpark2_sidebar">Sidebar</h3>
 	Check to disable the sidebar <input type="checkbox" name="sidebar_disable" <?php echo ($data['sidebar']['disable'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /> 
-
-		<p>Sidebar box &nbsp; <a href="#greenpark2_sidebar_doc">( ? )</a></p>
-		<table class="form-table">
-			<tr>
-				<th>
-					Title:
-				</th>
-				<td>
-					<input type="text" name="sidebar_about_title" value="<?php echo $data['sidebar']['about_title']; ?>" size="35" />
-				</td>
-			</tr>
-			<tr>
-				<th>
-					Content:
-				</th>
-				<td>
-					<textarea name="sidebar_about_content" rows="10" style="width: 95%;"><?php echo $data['sidebar']['about_content']; ?></textarea>
-				</td>
-			</tr>
-		</table>
-		<br />
-
 
     <h3 id="greenpark2_comments">Comments</h3>
 		Check to hide the comments from pages<input type="checkbox" name="comments_page_disable" <?php echo ($data['comments']['page_disable'] == 'yes' ? 'checked="checked"' : ''); ?> value="yes" /> 

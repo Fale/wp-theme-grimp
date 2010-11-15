@@ -40,17 +40,6 @@
 </li>
 <?php } ?>
 
-
-<li id="about" class="clearfix">
-  <div class="sb-title"><?php echo get_option('greenpark2_sidebar_about_title'); ?></div>
-  <ul>
-  	<li>
-  		<?php echo get_option('greenpark2_sidebar_about_content');?>
-		</li>
-	</ul>
-</li>
-
-
 <?php 	if ( ! dynamic_sidebar( 'primary-widget-area' ) ) : ?>
 
 	<?php if ( is_404() || is_category() || is_day() || is_month() || is_year() || is_search() || is_paged() ) { ?>
