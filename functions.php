@@ -13,16 +13,20 @@ function theme_init(){
 add_action ('init', 'theme_init');
 
 
-
-if ( function_exists('register_sidebar') ) {
-  register_sidebar(array(
+function greenpark2_widgets_init() {
+	// Area 1, located at the top of the sidebar.
+	register_sidebar( array(
+		'name' => __( 'Widget Area', 'greenpark2' ),
+		'id' => 'primary-widget-area',
+		'description' => __( 'The widget area in the right side', 'greenpark2' ),
     'before_widget' => '<li id="%1$s" class="widget %2$s">',
     'after_widget' => '</li>',
     'before_title' => '<div class="sb-title widgettitle">',
     'after_title' => '</div>',
-    'name' => 'Sidebar'
-  ));
+	) );
 }
+add_action( 'widgets_init', 'greenpark2_widgets_init' );
+
 
 
 // http://sivel.net/2008/10/wp-27-comment-separation/
