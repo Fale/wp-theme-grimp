@@ -51,7 +51,7 @@
 </li>
 
 
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : ?>
+<?php 	if ( ! dynamic_sidebar( 'primary-widget-area' ) ) : ?>
 
 	<?php if ( is_404() || is_category() || is_day() || is_month() || is_year() || is_search() || is_paged() ) { ?>
 	<li class="currently-viewing">

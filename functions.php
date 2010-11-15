@@ -14,7 +14,6 @@ add_action ('init', 'theme_init');
 
 
 function greenpark2_widgets_init() {
-	// Area 1, located at the top of the sidebar.
 	register_sidebar( array(
 		'name' => __( 'Widget Area', 'greenpark2' ),
 		'id' => 'primary-widget-area',
