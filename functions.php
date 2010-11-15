@@ -54,7 +54,6 @@ function greenpark2() {
 	if(isset($_POST['submitted']) and $_POST['submitted'] == 'yes') :
 		update_option("greenpark2_feed_uri", stripslashes($_POST['feed_uri']));
 		update_option("greenpark2_about_site", stripslashes($_POST['about_site']));
-		update_option("google_analytics", stripslashes($_POST['google_analytics']));
 		update_option("google_adsense_bottom", stripslashes($_POST['google_adsense_bottom']));
 		update_option("google_adsense_sidebar", stripslashes($_POST['google_adsense_sidebar']));
 
@@ -214,21 +213,6 @@ function greenpark2() {
 			</tr>
 		</table>
 		<br />
-		
-
-    <h3 id="greenpark2_misc">Misc</h3>
-		<p>Google Analytics.</p>
-		<table class="form-table">
-			<tr>
-				<th>
-					Google Analytics:
-				</th>
-				<td>
-					<textarea name="google_analytics" style="width: 95%;" rows="10" /><?php echo get_option('google_analytics'); ?></textarea>
-					<br />Paste your Google Analytics code here. It will appear at the end of each page.
-				</td>
-			</tr>
-		</table>
 
     <p class="submit" id="jump_submit">
 			<input name="submitted" type="hidden" value="yes" />
