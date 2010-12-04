@@ -1,14 +1,6 @@
 <div id="sidebar">
 	<ul class="sb-list clearfix">
-  <?php if ( is_single() ) { ?>
-  <li>
-	  <ul class="sb-tools clearfix">
-		  <?php previous_post_link('<li class="previous-post">%link</li>', '<span>' . (__('Previous Entry', 'default')) . '</span> %title'); ?>
-		  <?php next_post_link('<li class="next-post">%link</li>', '<span>' . (__('Next Entry', 'default')) . '</span> %title'); ?>
-	  </ul>	
-  </li>
-  <?php } 
-  
+  <?php
   if (is_home())
     $sb = "blog-widget-area";
   else
@@ -48,6 +40,14 @@
 	<?php }?>
 
 <?php endif;?>
-</ul>
 
+  <?php if ( is_single() ) { ?>
+  <li>
+	  <ul class="sb-tools clearfix">
+		  <?php previous_post_link('<li class="previous-post">%link</li>', '<span>' . (__('Previous Entry', 'default')) . '</span> %title'); ?>
+		  <?php next_post_link('<li class="next-post">%link</li>', '<span>' . (__('Next Entry', 'default')) . '</span> %title'); ?>
+	  </ul>	
+  </li>
+  <?php } ?>
+</ul>
 </div> <!-- #sidebar -->
