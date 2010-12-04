@@ -5,7 +5,7 @@
 
   		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     		<div class="hentry post" id="post-<?php the_ID(); ?>">
-    		  <h1><?php the_title(); ?></h1>
+    		  <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to', 'default'); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
     		  <?php edit_post_link(__( 'Edit this entry', 'default' ), '<small class="meta">', '</small>'); ?>
     			<div class="entry">
             <?php the_content(''); ?>
