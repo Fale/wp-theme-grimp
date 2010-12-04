@@ -15,9 +15,18 @@ add_action ('init', 'theme_init');
 
 function greenpark2_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Widget Area', 'greenpark2' ),
+		'name' => __( 'Sidebar', 'greenpark2' ),
 		'id' => 'primary-widget-area',
 		'description' => __( 'The widget area in the right side', 'greenpark2' ),
+    'before_widget' => '<li id="%1$s" class="widget %2$s">',
+    'after_widget' => '</li>',
+    'before_title' => '<div class="sb-title widgettitle">',
+    'after_title' => '</div>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Blog', 'greenpark2' ),
+		'id' => 'blog-widget-area',
+		'description' => __( 'The widget area in the right side of the blog', 'greenpark2' ),
     'before_widget' => '<li id="%1$s" class="widget %2$s">',
     'after_widget' => '</li>',
     'before_title' => '<div class="sb-title widgettitle">',
