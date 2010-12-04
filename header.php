@@ -84,7 +84,7 @@ if (top.location != self.location) top.location = self.location;
 			<?php get_search_form(); ?>
 		</div>
 		<ul id="menu">
-  		<li class="page-item-home <?php if ( is_home() ) { ?> current_page_item <?php } ?>"><a href="<?php echo get_option('home'); ?>/"><?php _e('Home', 'default'); ?></a></li>
+  		<li class="page-item-home <?php if ( $_SERVER['REQUEST_URI'] == '/' ) { ?> current_page_item <?php } ?>"><a href="<?php echo get_option('home'); ?>/"><?php _e('Home', 'default'); ?></a></li>
 		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'depth' => 1, 'theme_location' => 'primary' ) ); ?>
 		</ul>
     <div id="submenu-bg">
