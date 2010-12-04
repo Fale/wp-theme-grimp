@@ -17,7 +17,7 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" type="image/x-icon" />
 
-<?php 
+<?php
 if (isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], 'images.google.com'))
 echo '<script language="JavaScript" type="text/javascript">
 if (top.location != self.location) top.location = self.location;
@@ -78,7 +78,7 @@ if (top.location != self.location) top.location = self.location;
 		  <?php bloginfo('description'); ?>
     </div>
 	</div>
-	
+
 	<div id="nav" class="clearfix">
 		<div id="nav-search">
 			<?php get_search_form(); ?>
@@ -87,7 +87,7 @@ if (top.location != self.location) top.location = self.location;
   		<li class="page-item-home <?php if ( is_home() ) { ?> current_page_item <?php } ?>"><a href="<?php echo get_option('home'); ?>/"><?php _e('Home', 'default'); ?></a></li>
 		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'depth' => 1, 'theme_location' => 'primary' ) ); ?>
 		</ul>
-    <div id="submenu-bg">    
+    <div id="submenu-bg">
       <?php if ( !is_search() && !is_404() ) {
     		if($post->post_parent)
     		$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
