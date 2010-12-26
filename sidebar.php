@@ -11,7 +11,7 @@
 
   if ( ! dynamic_sidebar( $sb ) ) : ?>
 
-	<?php if ( is_404() || is_category() || is_day() || is_month() || is_year() || is_search() || is_paged() ) { ?>
+	<?php if ( is_404() || is_day() || is_month() || is_year() || is_search() || is_paged() ) { ?>
 	<li class="currently-viewing">
 
 	<?php /* If this is a 404 page */ if (is_404()) { ?>
