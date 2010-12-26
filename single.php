@@ -24,11 +24,8 @@
       		<?php next_post_link('<li class="next_post">%link</li>', '<span>' . (__('Next Entry', 'default')) . ':</span> %title'); ?>
       	</ul>
 			</div>
-			
+
 			<div class="postmetadata">
-			  <p class="categories">
-			    <?php _e('Posted in ', 'default' ); the_category(', '); ?>
-        </p>
   			<?php the_tags('<p class="tags">Tags: ', ' ', '</p>'); ?>
         <p class="infos">
 						<?php _e('You can follow any responses to this entry through the', 'default'); ?> <a href="<?php echo get_post_comments_feed_link() ?>" rel="nofollow"><?php _e('RSS 2.0 Feed', 'default'); ?></a>. 
