@@ -1,7 +1,7 @@
 <div id="sidebar">
 	<ul class="sb-list clearfix">
   <?php
-  if (is_home())
+  if (is_home() || is_category())
     $sb = "blog-widget-area";
   else
     if (is_single())
