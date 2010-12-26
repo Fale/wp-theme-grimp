@@ -50,12 +50,9 @@
 					</p>
 				</div>
 
-      <?php include (TEMPLATEPATH . '/ad_middle.php'); ?>
-
 		</div>
 
   	<?php comments_template('', true); ?>
-  	 
 
 	<?php endwhile; else: ?>
 
