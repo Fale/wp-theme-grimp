@@ -20,8 +20,8 @@
 				<?php $c = 0;
 foreach (get_the_category() as $category)
 	if ($category->slug == "grimp")
-		$c = $c + 1;
-if ($c > 0)
+		$c = 1;
+if ($c == 0)
 	echo "ATTENZIONE: Quanto scritto in questo articolo rappresenta il punto di vista dell'autore stesso e potrebbe non rappresentare il punto di vista dell'azienda. È possibile che quanto scritto sia addirittura contrastante con il punto di vista dell'azienda sull'argomento.";
  ?>
 
