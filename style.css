@@ -801,7 +801,12 @@ html .clearfix { display: block; }
 /* qTranslate*/
 .qtrans_language_chooser { list-style-type:none; }
 .top-wa { list-style-type:none; }
-.qtrans_language_chooser li { float : left; margin-right: 30px; }
+.qtrans_language_chooser li {
+    float: left;
+    margin-right: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 .qtrans_language_chooser li.active {
     opacity: 0.4;
     filter: alpha(opacity=40);
