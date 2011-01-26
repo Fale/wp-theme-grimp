@@ -797,3 +797,11 @@ html .clearfix { display: block; }
   #content-alone #content-with-sidebar .entry p a:after { content: "  [" attr(href) "] "; }
   #accessibility, hr, #nav, #sidebar, .something { display: none; }
 }
+
+/* qTranslate*/
+.qtrans_language_chooser { list-style-type:none; }
+.qtrans_language_chooser li { float : left; margin-right: 20px; }
+.qtrans_language_chooser li.active {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
