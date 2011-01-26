@@ -327,7 +327,7 @@ function greenpark2_footer() { ?>
 
 <div id="footer" class="clearfix">
 <p class="aligncenter">
-  &copy; 2010 Grimp di Fabio Alessandro Locati<br />
+  &copy; 2010-<?php echo date("Y"); ?> Grimp di Fabio Alessandro Locati<br />
   Partita IVA: 07185690968<br />
   <?php _e('Valid XHTML 1.0 Transitional | Valid CSS 3', 'default'); ?><br />
   <?php _e('Theme based on <a href="http://cordobo.com/tag/cordobo-green-park-2/">CGP2</a>', 'default'); ?>
