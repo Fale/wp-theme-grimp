@@ -28,10 +28,8 @@ if (top.location != self.location) top.location = self.location;
 <?php wp_head(); ?>
 </head>
 <body id="home">
-
-
 <div id="header" class="clearfix">
-
+    <div class="alignright"><?php dynamic_sidebar('top-widget-area'); ?></div>
 	<?php if (get_option('greenpark2_accessibility_disable') != 'yes')
 	{
 		echo('<ul id="accessibility">');
