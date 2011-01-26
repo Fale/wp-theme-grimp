@@ -804,7 +804,7 @@ html .clearfix { display: block; }
 .qtrans_language_chooser li {
     float: left;
     margin-right: 30px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 .qtrans_language_chooser li.active {
     opacity: 0.4;
