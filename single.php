@@ -22,7 +22,7 @@ foreach (get_the_category() as $category)
 	if ($category->slug == "grimp")
 		$c = 1;
 if ($c == 0)
-	_e("[:it]ATTENZIONE: Quanto scritto in questo articolo rappresenta il punto di vista dell'autore stesso e potrebbe non rappresentare il punto di vista dell'azienda. È possibile che quanto scritto sia addirittura contrastante con il punto di vista dell'azienda sull'argomento.[:en]WARNING: This article represents the views of the author and may not represent the company point of view. It is possible that what is written in the article is actually contrary to the views of the company on the subject.";
+	_e("[:it]ATTENZIONE: Quanto scritto in questo articolo rappresenta il punto di vista dell'autore stesso e potrebbe non rappresentare il punto di vista dell'azienda. È possibile che quanto scritto sia addirittura contrastante con il punto di vista dell'azienda sull'argomento.[:en]WARNING: This article represents the views of the author and may not represent the company point of view. It is possible that what is written in the article is actually contrary to the views of the company on the subject.");
  ?>
 
 				<?php wp_link_pages(array('before' => '<div class="page-link clearfix"><strong>Pages:</strong>', 'after' => '</div>', 'next_or_number' => 'number', 'pagelink' => '<span>%</span>')); ?>
