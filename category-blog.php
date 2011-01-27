@@ -11,7 +11,6 @@
               <?php the_time(__('F jS, Y', 'default')) ?> <?php _e('by', 'default'); ?> <?php the_author() ?>
               <?php edit_post_link(__( 'Edit this entry', 'default' ), ' | ', ''); ?>
       			</span>
-            <a href="#comments" class="alignright button-style" rel="nofollow"><?php _e('Leave a reply', 'default'); ?> &raquo;</a>
           </small>
     			<div class="entry">
             <?php the_content(''); ?>
