@@ -30,10 +30,7 @@
           </p>
 				  <?php the_tags('<p class="tags">Tags: ', ' ', '</p>'); ?>
         </div>
-        
-      <?php // include (TEMPLATEPATH . '/ad_middle.php'); ?>
-        
-			</div>
+        			</div>
 
 		<?php endwhile; ?>
 
