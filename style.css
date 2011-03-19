@@ -54,8 +54,6 @@ html {
   overflow-y: scroll;
 }
 body {
-  background: url(img/bg-body.png) 50% 74px no-repeat;
-  *background-position: 50% 84px;
   font: 100.1%/1.5 "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", "Microsoft YaHei", sans-serif;
   font-smooth: always;
   text-align: center;
@@ -209,12 +207,13 @@ td#next { text-align: right; }
   background-color: #fff;
   text-align: left;
   margin: 0 auto 3px;
-  width: 985px;
+  width: 95%;
 }
 
 #header,
-#sidebar,
-#footer { font-size: 0.7em; }
+#sidebar { font-size: 0.7em; }
+
+#footer { font-size: 0.83em; }
 
 #header { height: 146px; margin-top: 10px; position: relative; }
 
@@ -243,9 +242,6 @@ td#next { text-align: right; }
   width: 250px;
 }
 
-#footer { padding: 10px 28px; width: 929px; }
-
-
 
 /* HEADER
 ------------------------------------------------------------------- */
@@ -255,7 +251,7 @@ td#next { text-align: right; }
 #logo, #logo a { display: block; height: 50px; width: 127px; }
 #logo { position: absolute; top: -25px; }
 #logo a { background: transparent url(img/logo.png) top left no-repeat; text-indent: -9999em; }
-.description-logo { color: #868F98; display: block; left: 140px; position: absolute; top: 44px; }
+.description-logo { color: #868F98; display: block; left: 140px; position: absolute; top: 17px; width: 400px;}
 
 /* Text logo */
 #branding { display: block; position: absolute; top: 30px; left: 28px; }
@@ -276,14 +272,13 @@ h1#brand { font-size: 30px; line-height: 1.2; margin: 0; }
 #accessibility a { background: transparent url(img/navigation.png) right -200px no-repeat; padding: 0 7px 0 4px; }
 #accessibility .last-item a { background: none; padding-right: 0; }
 
-#nav { position: absolute; top: 75px; left: 0; width: 985px; }
+#nav { position: absolute; top: 75px; left: 0; width: 100%;}
 
 ul#menu {
   background: #89CB11 url(img/navigation.png) top left repeat-x;
   display: block;
   height: 41px;
-  padding: 0 28px 0 18px;
-  width: 939px;
+  width: 100%;
 }
 
 #menu li,
@@ -311,7 +306,7 @@ ul#menu {
   text-shadow: 1px 1px 1px #000;
 }
 
-#submenu-bg { background: transparent url(img/bg-submenu.jpg) 0 3px repeat-x; height: 30px; width: 985px; }
+#submenu-bg { background: transparent url(img/bg-submenu.jpg) 0 3px repeat-x; height: 30px; width: 100%; }
 ul#submenu { display: block; padding: 5px 21px 0; }
 #submenu li,
 #submenu a { display: block; float: left; }
@@ -419,7 +414,7 @@ ul#submenu { display: block; padding: 5px 21px 0; }
   margin: 0 -28px;
   padding: 6px 28px;
   text-shadow: 0px 1px 0px #fff;
-  width: 576px;
+  width: 100%;
 }
 
 * html .meta { height: 1%; }

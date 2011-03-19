@@ -1,8 +1,6 @@
 </div> <!-- #main -->
 
-<?php wp_footer(); ?>
-
-<?php // Sully Denons « Organical Code » - No animals were harmed during the testing of this theme. ?>
-
+<div id="footer" class="clearfix">
+<?php wp_footer(); ?></div>
 </body>
 </html>
