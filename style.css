@@ -318,12 +318,23 @@ h1#brand { font-size: 30px; line-height: 1.2; margin: 0; }
 
 #nav { position: absolute; top: 75px; left: 0; width: 100%;}
 
-ul#menu {
-  background: #89CB11 url(img/navigation.png) top left repeat-x;
-  display: block;
-  height: 41px;
-  width: 939px;
-  padding: 0 28px 0 18px;
+@media screen {
+  ul#menu {
+    background: #89CB11 url(img/navigation.png) top left repeat-x;
+    display: block;
+    height: 41px;
+    width: 939px;
+    padding: 0 28px 0 18px;
+  }
+}
+
+@media handheld {
+  ul#menu {
+    background: #89CB11 url(img/navigation.png) top left repeat-x;
+    display: block;
+    height: 41px;
+    width: 100%;
+  }
 }
 
 #menu li,
