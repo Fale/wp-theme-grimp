@@ -324,16 +324,11 @@ function greenpark2_options() { // Adds to menu
    Please leave the credits. Thanks!
  */
 function greenpark2_footer() { ?>
-
-<div id="footer" class="clearfix">
 <p class="aligncenter">
   &copy; 2010-<?php echo date("Y"); ?> Grimp di Fabio Alessandro Locati<br />
   Partita IVA: 07185690968<br />
   <?php _e('Valid XHTML 1.0 Transitional | Valid CSS 3', 'default'); ?><br />
 </p>
-
-</div>
-
 <?php
 }
   

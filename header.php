@@ -93,7 +93,7 @@ if (top.location != self.location) top.location = self.location;
         else
             $home_link = get_option('home');
 		?>
-  		<li class="page-item-home <?php if ( $_SERVER['REQUEST_URI'] == '/' ) { ?> current_page_item <?php } ?>"><a href="<?php echo $home_link; ?>/">Home</a></li>
+                <li class="page-item-home <?php if ( $_SERVER['REQUEST_URI'] == '/' ) { ?>current_page_item<?php } ?>"><a href="<?php echo $home_link; ?>/">Home</a></li>
 		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'depth' => 1, 'theme_location' => 'primary' ) ); ?>
 		</ul>
     <div id="submenu-bg">
