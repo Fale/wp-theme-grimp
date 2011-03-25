@@ -207,7 +207,7 @@ td#next { text-align: right; }
   background-color: #fff;
   text-align: left;
   margin: 0 auto 3px;
-  width: 95%;
+  width: 985px;
 }
 
 #header,
@@ -278,7 +278,8 @@ ul#menu {
   background: #89CB11 url(img/navigation.png) top left repeat-x;
   display: block;
   height: 41px;
-  width: 100%;
+  width: 939px;
+  padding: 0 28px 0 18px;
 }
 
 #menu li,
